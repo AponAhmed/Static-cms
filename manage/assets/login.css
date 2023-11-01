@@ -1,0 +1,143 @@
+:root {
+    --primarycollor: rgb(37, 127, 179);
+    --primary: #11998e;
+    --secondary: #38ef7d;
+    --white: #fff;
+    --gray: #9b9b9b;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.login-card {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #d9d9d9;
+    border-radius: 3px;
+}
+
+.login-card h2 {
+    font-weight: 300;
+}
+
+.login-card-left {
+    width: 270px;
+    background: #0f0f0f;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-header {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 7px;
+}
+
+.login-card-left p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.login-body {
+    padding: 25px 50px;
+    flex-grow: 1;
+    width: 280px;
+}
+
+.form-group.remember_wrap .form-label {
+    color: #999;
+}
+
+.form-group.remember_wrap {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.btn.btn-primary {
+    padding: 8px 22px;
+    border-radius: 0;
+    border: 1px solid #0f0f0f;
+    margin-right: 15px;
+    background: #464646;
+    color: #fff;
+}
+
+.invalid-feedback strong {
+    color: #f00;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.btn-link.form-label {
+    font-size: 14px;
+    color: #575757;
+    text-decoration: none;
+}
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid var(--gray);
+    outline: 0;
+    padding: 7px 0;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+    cursor: text;
+    top: 22px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    color: var(--primary);
+    font-size: 12px;
+}
+
+.form__field:focus {
+    border-width: 1px;
+    border-image: linear-gradient(to right, var(--primary), var(--secondary));
+    border-image-slice: 1;
+}
+
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .login-card {
+        flex-direction: column;
+    }
+
+    .login-card-left {
+        width: 100%;
+        min-height: 250px;
+    }
+}

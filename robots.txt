@@ -1,0 +1,8 @@
+user-agent: ChatGPT-User
+disallow: /
+
+User-agent: crawler_eb_germany_2.0
+Disallow: /
+
+User-agent: *
+Disallow: /content/data/

@@ -1,0 +1,33 @@
+/* CKEditor 5 Classic Editor Content Area */
+.ck-content {
+    color: #1a1a1a;
+    font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* CKEditor 5 Classic Editor Toolbar */
+.ck.ck-editor__top {
+    color: #1a1a1a;
+    font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.ck-content h2 {
+    font-size: 28px;
+    line-height: 1.25;
+}
+
+.ck-editor__editable_inline {
+    min-height: 200px;
+    max-height: 400px;
+    scrollbar-width: thin;
+    line-height: 1.5;
+}
+
+.page-editor-sec .ck-editor__editable_inline {
+    min-height: 400px;
+}

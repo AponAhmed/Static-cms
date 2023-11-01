@@ -1,0 +1,168 @@
+:root {
+    --primary-color: #0a4b7f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.9;
+}
+
+body {
+    margin: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 500;
+    color: #084f84;
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+    line-height: 1.7;
+    margin: 5px 0 15px;
+    font-weight: 500;
+}
+
+
+
+p {
+    color: #333;
+    line-height: 1.9;
+    margin: 0 0 20px;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.btn {
+    padding: 10px 18px;
+    font-size: 15px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 4px;
+    line-height: 1;
+}
+
+.btn-primary {
+    background: #0a4b7f;
+    color: #fff;
+}
+
+article ol,
+article ul {
+    padding-left: 20px;
+}
+
+article ol li,
+article ul li {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+article ol li strong,
+article ul li strong {
+    font-size: 18px;
+}
+
+
+.banner-simple {
+    background: #f6f6f6;
+    padding: 40px;
+    margin-bottom: 35px;
+}
+
+.banner-simple * {
+    text-align: center;
+}
+
+/* Intro */
+.box-row.intro {
+    margin-top: 40px;
+}
+
+.col-rev {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.box-row.intro ul li {
+    list-style: none;
+    padding: 8px 8px;
+}
+
+.box-row.intro>div.box:nth-child(2) .innerColumn>p img {
+    background: #f9f9f9;
+    margin-bottom: 25px;
+}
+
+.box-row.intro>div.box:nth-child(2) .innerColumn>p {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.box-row.intro>div.box:nth-child(3) .innerColumn>h2 {
+    background: #f9f9f9;
+}
+
+.box-row.intro>div.box:last-child .innerColumn h4 {
+    background: #f9f9f9;
+    padding: 5px 10px;
+}
+
+.box-row.intro>div.box:first-child .innerColumn h3 {
+    margin: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 35px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    position: relative;
+    margin-bottom: 22px;
+    line-height: 1.3;
+    color: #0e4f7f;
+    max-width: 400px;
+}
+
+.box-row.intro>div.box:first-child .innerColumn h3::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: #f00;
+}
+
+/* End Intro */

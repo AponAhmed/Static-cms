@@ -1,0 +1,454 @@
+.entry-title.contact-title {
+    margin-bottom: 15px;
+}
+
+.contact-map {
+    margin-bottom: 35px;
+}
+
+.input-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.input-wrap label {
+    margin-bottom: 0;
+}
+
+#contactForm .contactFormField {
+    padding: 2px 10px;
+    line-height: 1.8;
+    margin: 0;
+    border: 1px solid #999;
+}
+
+#contactForm button#submitBtn {
+    background: var(--primary-color);
+}
+
+.question label {
+    margin: 0;
+    padding: 4px 15px;
+    line-height: 1.8;
+    flex-basis: 120px;
+    background: #ddd;
+}
+
+#contactForm .question .contactFormField {
+    width: 100%;
+    flex-grow: 1;
+    border: none;
+}
+
+.question {
+    display: flex;
+    align-items: center;
+    border: 1px solid #999;
+}
+
+textarea.contactFormField {
+    min-height: 200px;
+}
+
+#contactForm #submitBtn {
+    line-height: 1.8;
+    padding: 5px 32px;
+    text-transform: uppercase;
+}
+
+.address-area h3,
+.address-area strong {
+    background: #f6f6f6;
+    padding: 5px 12px;
+    font-size: 20px;
+}
+
+.contact-form {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.contact-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.spinLoader {
+    position: relative;
+    width: 20px;
+    height: 21px;
+    display: inline-block;
+    margin: 0 10px;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+.spinLoader i {
+    width: 20px;
+    height: 1px;
+    background: #999;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+.contactMsg {
+    margin-left: 15px;
+}
+
+.spinLoader i:nth-child(1) {
+    transform: rotate(20deg);
+}
+
+.spinLoader i:nth-child(2) {
+    transform: rotate(40deg);
+}
+
+.spinLoader i:nth-child(3) {
+    transform: rotate(60deg);
+}
+
+.spinLoader i:nth-child(4) {
+    transform: rotate(80deg);
+}
+
+.spinLoader i:nth-child(5) {
+    transform: rotate(100deg);
+}
+
+.spinLoader i:nth-child(6) {
+    transform: rotate(120deg);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+/*Floated Contact*/
+.floated-contact-triger {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    padding: 15px;
+    line-height: 1;
+    background: rgb(11, 76, 128);
+    border-radius: 50px;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+.floated-contact-triger svg {
+    color: #fff;
+}
+
+.floated-contact-form-wrap {
+    position: fixed;
+    right: 30px;
+    bottom: 104px;
+    padding: 20px;
+    background: #fff;
+    z-index: 999999;
+    border: 1px solid var(--primary-color);
+    width: 360px;
+    display: none;
+    padding-top: 101px;
+    border-radius: 4px;
+}
+
+.contact-wrap-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    height: 50px;
+    background: var(--primary-color);
+}
+
+.contact-wrap-header .shortly-msg {
+    line-height: 1.3;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: rgb(250, 249, 249);
+    border-radius: 4px;
+    display: block;
+}
+
+.floated-contact-form-wrap.open {
+    display: block;
+}
+
+.floated-contact-form-wrap .input-wrap label {
+    color: #828282;
+    font-size: 16px;
+}
+
+.floated-contact-form-wrap #contactForm .contactFormField {
+    border: 1px solid #ccc;
+    border-radius: 0;
+}
+
+.floated-contact-form-wrap .input-wrap.gac-subject-in {
+    display: none;
+}
+
+.floated-contact-form-wrap .contactForm {
+    margin-top: 0;
+}
+
+.question label {
+    font-size: 15px;
+    padding: 4px 8px;
+}
+
+.floated-contact-form-wrap #contactForm .question .contactFormField {
+    border: none;
+}
+
+.floated-contact-form-wrap .question {
+    border: 1px solid #ccc;
+}
+
+.floated-contact-form-wrap textarea.contactFormField {
+    height: 100px;
+    min-height: initial;
+    max-width: 100%;
+}
+
+.floated-contact-form-wrap .input-wrap {
+    margin-bottom: 4px;
+}
+
+.close-floated {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.close-floated::before {
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-floated::after {
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*Write Us*/
+
+.write-us-btn {
+    background: var(--primary-color);
+    border-radius: 4px;
+    padding: 0px 20px;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #0e4771;
+    line-height: 1.6;
+    margin-top: 15px;
+    width: auto;
+    height: 40px;
+}
+
+.write-us {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+}
+
+.write-us-form {
+    width: 630px;
+    padding: 50px;
+    background: #fff;
+    border: 1px solid #ddd;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.write-us.floated-contact-form-wrap {
+    display: block;
+    padding: 0;
+    border: 0;
+}
+
+.floated-contact-form-wrap.write-us .input-wrap.gac-subject-in {
+    display: flex;
+}
+
+.closeButton {
+    position: absolute;
+    right: 18px;
+    top: 20px;
+    font-size: 50px;
+    line-height: 0;
+    height: 25px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+/*File Upload*/
+.fileUploader {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.fileUploader .browse {
+    border: 1px dashed #ddd;
+    display: flex;
+    height: 80px;
+    line-height: 0;
+    padding: 10px;
+    width: 80px;
+    margin: 5px 0;
+}
+
+#previewArea {
+    display: flex;
+    margin-left: -5px;
+    margin-right: 5px;
+    flex-wrap: wrap;
+}
+
+#previewArea .image-container {
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    margin: 5px;
+    padding: 2px;
+    position: relative;
+    width: 80px;
+}
+
+#previewArea .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#previewArea .image-container .progress-bar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.progress-bar-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: rgba(0, 255, 0, .2);
+}
+
+.progress-bar.upload-success {
+    display: none;
+}
+
+.remove-attachment {
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 23px;
+    color: red;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    height: 18px;
+    justify-content: center;
+    line-height: 5;
+    padding: 0 0 4px 0px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 18px;
+}
+
+.gac-upload-in>label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gac-upload-in>label .hint {
+    font-size: 12px;
+}
+
+/*Small Divice*/
+@media only screen and (max-width: 580px) {
+    .gac-upload-in>label {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .write-us-form {
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        padding-top: 100px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .contact-wrap-header .shortly-msg {
+        margin-top: 20px;
+    }
+
+    .floated-contact-form-wrap {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: initial;
+        top: 0;
+        padding: 140px 25px;
+        border-radius: 0;
+        border: 0;
+    }
+
+    .floated-contact-triger {
+        z-index: 9999999;
+    }
+}

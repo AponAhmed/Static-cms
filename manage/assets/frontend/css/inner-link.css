@@ -1,0 +1,233 @@
+/* 
+    Created on : May 12, 2023, 12:26:15 PM
+    Author     : Mahabub
+*/
+
+.qa-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.wa-sidebar {
+    flex-basis: 25%;
+    max-width: 25%;
+}
+
+.qa-wrap.max-scrolled .wa-sidebar ul,
+.qa-wrap.max-scrolled .wa-sidebar ol {
+    position: absolute !important;
+    bottom: 0 !important;
+    top: initial !important;
+}
+
+.qa-wrap.max-scrolled .wa-sidebar {
+    position: relative;
+}
+
+.qa-wrap.tab-type-wrap.max-scrolled .wa-sidebar ul,
+.qa-wrap.tab-type-wrap.max-scrolled .wa-sidebar ol {
+    position: initial !important;
+    bottom: initial !important;
+    top: initial !important;
+}
+
+.wa-sidebar ul,
+.wa-sidebar ol {
+    padding: 0;
+    list-style: none;
+    transition: all .1s;
+    margin: 0;
+    max-height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.wa-sidebar ol {
+    list-style: decimal;
+    padding-left: 25px;
+}
+
+.wa-sidebar ul li,
+.wa-sidebar ol li {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+    position: relative;
+    padding-left: 0px;
+}
+
+.wa-sidebar ul li.current,
+.wa-sidebar ol li.current {
+    padding-left: 8px;
+    border-left: 2px solid #084f84;
+    background: #f7f7f7;
+}
+
+.wa-sidebar ul li.current a,
+.wa-sidebar ol li.current a {
+    font-weight: 600;
+}
+
+
+.wa-sidebar ol li a,
+.wa-sidebar ul li a {
+    color: #333 !important;
+    display: block;
+    font-size: 19px;
+    text-decoration: none;
+    text-align: left;
+}
+
+.wa-sidebar ul li:first-child,
+.wa-sidebar ol li:first-child {
+    border-top: 1px solid #eee
+}
+
+.wa-content {
+    flex-basis: 74%;
+    max-width: 74%;
+}
+
+.wa-content.content-index {
+    padding-left: 30px;
+}
+
+.qa-single {
+    padding: 20px;
+    padding-bottom: 1px;
+    margin: 0 15px;
+}
+
+.qa-single h3,
+.qa-single h2,
+.qa-single h4 {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.qa-single p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.blink-once {
+    animation-name: blink;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    border-radius: 12px;
+    background: #f9f9f9;
+}
+
+.qa-wrap.sidebar-right {
+    flex-direction: row-reverse;
+}
+
+.sidebar-right .wa-content.content-index {
+    padding-left: 0;
+    padding-right: 30px;
+}
+
+.qa-wrap.sidebar-right .qa-single {
+    margin-left: 0;
+}
+
+
+/*tab-type*/
+.qa-wrap.tab-type-wrap .qa-single {
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.qa-wrap.tab-type-wrap .qa-single h1,
+.qa-wrap.tab-type-wrap .qa-single h2,
+.qa-wrap.tab-type-wrap .qa-single h3,
+.qa-wrap.tab-type-wrap .qa-single h4 {
+    margin-top: 0;
+}
+
+.qa-wrap.tab-type-wrap .qa-single.blink-once {
+    background: transparent;
+    display: block;
+    animation-name: initial;
+}
+
+.qa-wrap.tab-type-wrap .wa-content {
+    flex-basis: 72%;
+    max-width: 72%;
+}
+
+.qa-wrap.tab-type-wrap .wa-sidebar.nav-index ul li.current,
+.qa-wrap.tab-type-wrap .wa-sidebar.nav-index ol li.current {
+    background: transparent;
+    border-left: none;
+}
+
+.qa-wrap.tab-type-wrap .wa-sidebar ul>li.current,
+.qa-wrap.tab-type-wrap .wa-sidebar ol>li.current {
+    border-left: 0;
+    position: relative;
+    background: transparent;
+    padding-left: 0;
+}
+
+.qa-wrap.tab-type-wrap .wa-sidebar ul>li.current a,
+qa-wrap.tab-type-wrap .wa-sidebar ol>li.current a {
+    /*! color: #fff !important; */
+    background: transparent;
+}
+
+.sidebar-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+@keyframes blink {
+    from {
+        background-color: #6892b0;
+    }
+
+    to {
+        background-color: #f9f9f9;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .wa-sidebar {
+        display: none;
+        flex-basis: 100%;
+        max-width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 27px;
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+    .wa-content.content-index {
+        padding: 0;
+    }
+
+    .wa-content,
+    .qa-wrap.tab-type-wrap .wa-content {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .qa-wrap.tab-type-wrap .qa-single {
+        display: block;
+    }
+
+    .wa-sidebar ul li,
+    .wa-sidebar ol li {
+        padding-left: 25px;
+    }
+
+    .wa-sidebar ul li::before,
+    .wa-sidebar ol li::before {
+        left: 5px;
+    }
+}

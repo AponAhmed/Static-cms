@@ -1,0 +1,154 @@
+.settings.sitemap-generate .tab-wrap.settings-tab .tab-contents-wrap {
+    padding: 0;
+}
+
+.keyword-manage {
+    background: #fff;
+    display: flex;
+    border-top: 0;
+}
+
+.keyword-manage .keyword-groups {
+    width: 250px;
+    border-right: 1px solid #ddd;
+}
+
+.newKey4Static,
+.uploadSvg {
+    display: flex;
+    align-items: center;
+    background: #f4f4f4;
+    margin: 15px;
+    border-radius: 5px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.newKey4Static svg,
+.uploadSvg svg {
+    width: 24px;
+    margin-right: 6px;
+}
+
+.csv-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: rgba(34, 113, 177, .2);
+    width: 0%;
+    pointer-events: none;
+}
+
+.keyGroupList,
+.svgFileList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.keyGroupList li,
+.svgFileList li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f2f2f2;
+    margin: 0;
+    cursor: pointer;
+    line-height: 1;
+    position: relative;
+}
+
+.keyGroupList li.active,
+.svgFileList li.active {
+    background: #1d2327;
+    color: #fff;
+    position: relative;
+    border-right: 3px solid #ff4b4b;
+}
+
+.removeList {
+    padding: 7px;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    cursor: pointer;
+}
+
+.keyword-keys,
+.csv-wrap {
+    flex-grow: 1;
+    width: 100%;
+    position: relative;
+}
+
+.loading-data {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+.svg-data {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.svg-data table {
+    border-collapse: collapse;
+}
+
+.svg-data table tr:first-child {
+    background: #2271b1;
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.csv-row-count {
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    padding: 0 2px;
+    color: #aaa;
+}
+
+.svg-data table tr td {
+    border: 1px solid #eee;
+    text-align: left;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dataPlaceHolder {
+    display: block;
+    width: 100%;
+    padding: 2px 5px;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.csv-wrap .update-csvData {
+    display: none;
+}
+
+.update-keyData,
+.update-csvData {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 1px solid #a2df7f;
+    background: #d9ffc4;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    color: #44712c;
+    z-index: 999999;
+}

@@ -1,0 +1,56 @@
+.dialog-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #257fb3;
+    border-radius: 4px;
+    min-width: 250px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    z-index: 9999;
+}
+
+.dialog-box .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.dialog-box .header .title-wrap {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.dialog-box .header .close-button {
+    font-size: 35px;
+    line-height: 0;
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    top: 10px;
+    color: #ff7e7e;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.dialog-box .body {
+    overflow-y: auto;
+    padding: 10px;
+    max-height: 400px;
+}
+
+.dialog-box .actions {
+    display: flex;
+    padding: 10px;
+}
+
+.dialog-box .actions .action {
+    padding: 4px 24px;
+    margin-right: 10px;
+    background: #ddd;
+    cursor: pointer;
+}
+
+.dialog-box .actions .action.btn-primary {
+    background: var(--primary-color);
+}

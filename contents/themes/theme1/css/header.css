@@ -1,0 +1,147 @@
+.header-wrapper {
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 0;
+}
+
+.logo a {
+    color: #333;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    line-height: 1;
+    font-size: 35px;
+    padding: 18px 0px;
+    font-weight: normal;
+}
+
+.logo img {
+    width: 200px;
+    height: 65px;
+}
+
+.header-right {
+    display: flex;
+    align-self: center;
+}
+
+.quick-contact-header {
+    display: flex;
+    align-items: center;
+}
+
+.body-openNav .quick-contact-header {
+    display: none;
+}
+
+
+
+.quick-contact-header a,
+.quick-contact-header span {
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    margin: 0 8px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+}
+
+.quick-contact-header a:last-child {
+    margin-right: 0;
+}
+
+.quick-contact-header svg {
+    height: 20px;
+    line-height: 1;
+    width: 20px;
+    margin-right: 5px;
+}
+
+p strong {
+    font-weight: normal;
+}
+
+
+.breadcrumb ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb ul li {
+    margin-right: 20px;
+    line-height: 1;
+    position: relative;
+}
+
+.breadcrumb ul li a,
+.breadcrumb ul li span {
+    font-size: 14px;
+    text-decoration: none;
+    max-width: 120px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+
+.breadcrumb {
+    margin-bottom: 25px;
+}
+
+.breadcrumb ul li::before {
+    content: "/";
+    position: absolute;
+    left: -12px;
+    font-size: 14px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: #999;
+}
+
+.breadcrumb ul li:first-child::before {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .logo img {
+        width: 140px;
+        height: 46px;
+    }
+
+    .slider-outer.full-width .slider-wrap {
+        max-height: 240px;
+    }
+
+    .quick-contact-header {
+        position: fixed;
+        top: 6px;
+        right: 10px;
+        z-index: 11;
+    }
+
+    .quick-contact-header a,
+    .quick-contact-header span {
+        display: none;
+    }
+
+    .quick-contact-header>*:last-child {
+        display: flex;
+        align-items: center;
+    }
+
+    .quick-contact-header>* {
+        color: #fff !important;
+    }
+
+    .quick-contact-header svg * {
+        color: #fff;
+    }
+}

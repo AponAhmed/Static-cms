@@ -1,0 +1,280 @@
+.hidden {
+	display: none;
+}
+
+#cart-icon {
+	position: relative;
+}
+
+#cart.open::before {
+	content: "";
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(5px);
+	background: rgba(0, 0, 0, .2);
+}
+
+#cart-icon {
+	position: fixed;
+	right: 0;
+	top: 40%;
+	display: none;
+}
+
+.cart-icon {
+	position: relative;
+	height: 24px;
+	margin-left: 15px;
+}
+
+.cart-icon svg {
+	width: 20px;
+}
+
+.cart-remove {
+	position: absolute;
+	right: 10px;
+	top: 4px;
+	font-size: 25px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.cart-icon .item-counter {
+	position: absolute;
+	top: 0px;
+	left: 1px;
+	font-size: 10px;
+	line-height: .5;
+	width: 100%;
+	text-align: center;
+}
+
+.cart-content {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	background: #fff;
+	padding: 50px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	max-height: 90%;
+	width: 50%;
+	overflow: hidden;
+}
+
+#cart-items {
+	overflow: auto;
+	scrollbar-width: thin;
+	max-height: calc(100vh - 200px);
+}
+
+.cart-remove {
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	font-size: 25px;
+}
+
+.cart-item {
+	display: flex;
+	align-items: center;
+	padding: 0px;
+	border-radius: 4px;
+	margin: 2px 0;
+	overflow: hidden;
+}
+
+.cart-item img {
+	width: 40px;
+	height: 40px;
+	padding: 2px;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	margin-right: 10px;
+}
+
+.cart-item a {
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 100%;
+	padding-right: 20px;
+}
+
+.remove-item {
+	padding: 4px 8px;
+	background: #eee;
+	cursor: pointer;
+}
+
+.remove-item:hover {
+	background: #f9d7d7;
+	color: #f00;
+}
+
+.cart-footer {
+	display: flex;
+	border-top: 1px solid #eee;
+	padding-top: 8px;
+	margin-top: 8px;
+}
+
+.cart-footer button {
+	padding: 6px 15px;
+	line-height: 1.2;
+	margin-right: 5px;
+	border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.cart-continue,
+.cart-send-btn {
+	background: #0a4b7f;
+	color: #fff;
+}
+
+.step-send,
+.cart-send-btn,
+.cart-content.cart-send .cart-continue,
+.cart-content.cart-send .cart-items {
+	display: none;
+}
+
+.cart-content.cart-send .step-send,
+.cart-content.cart-send .cart-send-btn {
+	display: block;
+}
+
+/*Form*/
+.cart-item-information {
+	font-weight: 300;
+}
+
+.cart-item-information .itemtrig {
+	font-weight: 500;
+	cursor: pointer;
+	color: #0a4b7f;
+}
+
+
+.quoteContactDetails input,
+.quoteContactDetails textarea {
+	margin-bottom: 5px !important;
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+.quoteContactDetails {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.name-email-area {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.name-email-area div input {
+	width: 100%;
+}
+
+.name-email-area div {
+	width: 49%;
+}
+
+/* Styles for the spinner icon (animated loading spinner) */
+.spinner-icon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 2px solid rgba(0, 0, 0, 0.3);
+	border-top: 2px solid #3498db;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+}
+
+
+.checkmark-icon {
+	display: flex;
+	align-items: center;
+	line-height: 1;
+}
+
+.checkmark-icon svg {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.checkmark-icon svg path {
+	stroke: #117d27;
+}
+
+.add2cart-wrap {
+	text-align: center;
+}
+
+.add2cart {
+	padding: 8px 8px;
+	background: transparent;
+	border: 0;
+	font-weight: 500;
+	font-size: 16px;
+	border-bottom: 2px solid;
+	color: #51739d;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.add2cart.on-request {
+	border-color: transparent;
+}
+
+/* Styles for the checkmark icon (a green checkmark) */
+
+
+/* Keyframes for the spin animation */
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
+	.cart-content {
+		left: 0;
+		top: 0;
+		transform: translate(0, 0);
+		padding: 50px 20px;
+		width: 100%;
+		height: 100%;
+		z-index: 15;
+	}
+}

@@ -1,0 +1,25 @@
+/* 
+    Created on : Apr 12, 2019, 11:36:52 AM
+    Author     : nrb
+*/
+
+.rr {
+    overflow: hidden;
+	padding: 2px 0px;
+}
+.rr .lbl {
+	float: left;
+	width: 120px;
+	padding: 3px 0;
+}
+.rr .fld {
+    float: left;
+    width: calc(100% - 120px);
+    box-sizing: border-box;
+}
+.rr .fld input.ckIn {
+    padding: 2px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+}

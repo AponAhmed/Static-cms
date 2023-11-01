@@ -1,0 +1,59 @@
+@import "./slider.css";
+@import "./image-shortcode.css";
+@import "./menu.css";
+@import "./inner-link.css";
+@import "./contact.css";
+@import "./cart.css";
+@import "./static.css";
+@import "./notification.css";
+
+.grid-view {
+    column-count: 2;
+    column-gap: 50px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+article ol li strong,
+article ul li strong {
+    font-weight: 600;
+}
+
+.has-strong strong {
+    font-weight: 600;
+}
+
+.expand-content {
+    display: none;
+}
+
+.expand-arrow {
+    width: 15px;
+    height: 15px;
+}
+
+.expand-wrap.active .expand-content {
+    display: block;
+}
+
+.expand-wrap.active .expand-arrow svg {
+    transform: rotate(180deg);
+}
+
+.color-wrap {
+    color: #666;
+}
+
+.color-wrap * {
+    color: inherit;
+}
+
+@media only screen and (max-width: 580px) {
+    .grid-view {
+        column-count: 1;
+    }
+}

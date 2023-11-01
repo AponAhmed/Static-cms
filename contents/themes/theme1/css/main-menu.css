@@ -1,0 +1,215 @@
+.nav-menu {
+    display: flex;
+}
+
+
+.nav-bg {
+    background-color: #0e4f7f;
+    -webkit-box-shadow: inset 0 -.1rem .25rem rgba(0, 0, 0, .1);
+    box-shadow: inset 0 -.1rem .25rem rgba(0, 0, 0, .1);
+}
+
+.header-nav .nav-item>a {
+    display: block;
+    font-size: 15px;
+    padding: .50rem;
+    text-decoration: none;
+    transition: background-color .3s;
+    color: #fff;
+    font-weight: 600;
+}
+
+.nav .nav-item.current-link {
+    background: rgba(255, 255, 255, .1);
+}
+
+.nav>.nav-item.current-link::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    border-bottom-color: #fff;
+}
+
+header .nav-sub .nav-item>a {
+    color: rgba(0, 0, 0, .8);
+}
+
+header .nav-item:hover>a {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.nav-toggle {
+    background: hsla(0, 0%, 100%, .1);
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    height: 32px;
+    justify-content: space-between;
+    padding: 8px 18px;
+    position: relative;
+    width: 64px;
+}
+
+.nav-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, .8);
+    display: block;
+    border-radius: 2px;
+}
+
+
+
+
+@media only screen and (max-width:768px) {
+    .container {
+        padding: 0px 30px;
+    }
+
+    #master-head {
+        margin-top: 32px;
+    }
+
+    .nav-bg {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        transform: none;
+        z-index: 10;
+    }
+
+    body .nav-menu .nav-sub {
+        display: none;
+        position: static;
+        padding-left: 15px;
+        box-shadow: none;
+        float: none;
+        background: transparent;
+        border-left: 2px solid #353535;
+    }
+
+    body .nav-menu .nav-sub.open {
+        display: block !important;
+    }
+
+    .nav>.nav-item.current-link::after {
+        display: none;
+    }
+
+    header .nav-sub .nav-item>a {
+        color: rgba(255, 255, 255, 0.8);
+        border-bottom: 1px solid #000;
+    }
+
+    .nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+    }
+
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .nav-menu ul li a {
+        color: #fff;
+        padding: 8px 10px;
+        border-bottom: 1px solid #000;
+        width: 100%;
+    }
+
+    .nav-toggle.taggOpen {
+        position: fixed;
+        right: 5px;
+        top: 0;
+        left: inherit;
+    }
+
+    .body-openNav .topBar {
+        margin-left: 0;
+    }
+
+    .nav-toggle {
+        background: rgba(255, 255, 255, .1);
+        z-index: 999999999;
+        margin-left: -30px;
+    }
+
+    .nav-toggle.taggOpen .bar:first-child {
+        display: block;
+        transform: rotate(45deg);
+        margin-top: 20px;
+        transition: .3s;
+    }
+
+    .nav-toggle.taggOpen .bar:last-child {
+        display: block;
+        transform: rotate(-45deg);
+        margin-top: -2px;
+        transition: .3s;
+    }
+
+    .nav-toggle.taggOpen .bar {
+        display: none;
+    }
+
+    .nav-toggle.taggOpen {
+        background: transparent;
+        height: 38px;
+        margin-top: 18px;
+    }
+
+    #navbarelement {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, .97);
+        z-index: 999999;
+        height: 100%;
+        transform: translate(-1500px);
+        transition: .2s cubic-bezier(.65, .05, .36, 1);
+        border-right: 1px solid #ddd;
+        width: 100%;
+        padding: 70px 15px;
+    }
+
+    .body-openNav {
+        overflow: hidden;
+    }
+
+    #navbarelement.openNav {
+        transform: translate(0px);
+        overflow-y: auto;
+    }
+
+    .has-child>a {
+        position: relative;
+    }
+
+    .has-child>a::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border: 2px solid #fff;
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 14px;
+        transform: rotate(45deg);
+        border-top: none;
+        border-left: 0;
+    }
+
+    .has-child.mobile-nav-open>a::after {
+        transform: rotate(-135deg);
+        top: 18px;
+    }
+}
