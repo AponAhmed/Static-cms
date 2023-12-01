@@ -131,7 +131,7 @@ class BlogRelatedTemplate
                 <div class="image-thumb scroll-fixed">
                     <?php
                     if (count(featureimages()) > 1) {
-                        makeSlider($page->featureimages, ['bullet' => true]);
+                        makeSlider($page->featureimages, ['bullet' => true, 'caption' => true, 'random' => true, 'nav' => true]);
                     } else {
                         get_thumbnail([6, 6, 12], true, true);
                     }

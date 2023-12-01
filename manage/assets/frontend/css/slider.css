@@ -24,6 +24,7 @@
     left: 0;
     top: 0;
     height: 100%;
+    flex-direction: column;
 }
 
 /* Style for the image side of the slider */
@@ -40,6 +41,11 @@
     max-height: 100%;
     max-width: 100%;
     object-fit: cover;
+}
+
+.image-thumb .slider-image img {
+    transform: translate(0, 0);
+    position: static;
 }
 
 /* Style for the text side of the slider */
@@ -74,8 +80,19 @@
 }
 
 .slider-arrow svg {
-    width: 28px;
     stroke: #bbb;
+    width: 28px;
+    fill: none;
+}
+
+.image-caption {
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+}
+
+.slider-wrap.image-ratio .bullets {
+    bottom: -45px;
 }
 
 .slider-arrow {
@@ -428,6 +445,11 @@
 
     .gallery-hoverable .image-list li.current::after {
         display: none;
+    }
+
+    #next-slide svg,
+    #prev-slide svg {
+        fill: none;
     }
 
     .gallery-hoverable .image-list li.current h1,

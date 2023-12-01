@@ -52,6 +52,15 @@ article ul li strong {
     color: inherit;
 }
 
+
+.bg-block * {
+    color: inherit;
+}
+
+.bg-block *:last-child {
+    margin-bottom: 0;
+}
+
 @media only screen and (max-width: 580px) {
     .grid-view {
         column-count: 1;

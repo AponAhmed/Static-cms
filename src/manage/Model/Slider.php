@@ -58,9 +58,11 @@ class Slider extends Model
         $defaults = [
             'bullet' => false,
             'nav' => false,
+            'caption' => false,
             'image_ratio' => 'r',
             'height' => 350,
             'autoslide' => "false",
+            'random' => false,
         ];
         // Merge the provided parameters with the defaults
         $params = (object) array_merge($defaults, $params);
@@ -86,6 +88,10 @@ class Slider extends Model
         } else {
             $cls = " image-squre";
         }
+
+        if ($params->caption) {
+            $cls .= " has-captions";
+        }
         $height = $params->height ? $params->height : 350;
 
         //Images Array
@@ -95,6 +101,9 @@ class Slider extends Model
             $images = array_filter($images, 'trim');
             // Remove any empty elements from the resulting array
             $images = array_filter($images, 'strlen');
+        }
+        if ($params->random) {
+            shuffle($images);
         }
 
         $html = '<div data-autoslide="' . $params->autoslide . '" class="slider-wrap' . $cls . '" style="height:100%">';
@@ -110,6 +119,9 @@ class Slider extends Model
             $html .= '<div class="slider-image">';
             $html .= $image->getImage($size, $ratio, $attr);
             $html .= '</div>';
+            if ($params->caption) {
+                $html .= '<p class="image-caption">' . $image->name . '</p>';
+            }
             $html .= '</div>';
         }
         if ($params->bullet) {

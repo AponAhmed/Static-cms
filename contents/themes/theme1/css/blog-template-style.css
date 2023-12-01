@@ -195,4 +195,7 @@ ul.tick-icon li::marker {
         padding: 42px 25px;
     }
 
+    .sidebar-bottom-text {
+        display: none;
+    }
 }
