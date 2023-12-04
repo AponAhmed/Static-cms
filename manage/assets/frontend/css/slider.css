@@ -80,7 +80,7 @@
 }
 
 .slider-arrow svg {
-    stroke: #bbb;
+    stroke: #fff;
     width: 28px;
     fill: none;
 }
@@ -96,17 +96,17 @@
 }
 
 .slider-arrow {
-    line-height: 0;
-    padding: 4px;
-    background: transparent;
+	background: rgba(0,0,0,.2);
+	line-height: 0;
+	padding: 8px 0;
 }
 
 #prev-slide {
-    left: -40px;
+    left: 0px;
 }
 
 #next-slide {
-    right: -40px;
+    right: 0px;
 }
 
 #prev-slide:hover svg,
