@@ -169,7 +169,7 @@ class SitemapController  extends Controller
 
                 $check = $this->isUsed($page->getLink());
                 if (!$check) {
-                    $this->map->addLink($homePage->getLink(), $this->dateAtom($homePage->modified_at()), 'weekly', $priority);
+                    $this->map->addLink($page->getLink(), $this->dateAtom($homePage->modified_at()), 'weekly', $priority);
                     $this->report[$page->slug]['count'] += 1;
                 } else {
                     $this->report[$page->slug]['skiped'] += 1;
