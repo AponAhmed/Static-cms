@@ -89,16 +89,26 @@
     font-size: 15px;
     font-style: italic;
     text-align: center;
+    color: inherit;
+}
+
+.image-caption-d {
+    display: none;
 }
 
 .slider-wrap.image-ratio .bullets {
+    bottom: -20px;
+}
+
+.slider-wrap.has-captions .bullets {
     bottom: -45px;
 }
 
+
 .slider-arrow {
-	background: rgba(0,0,0,.2);
-	line-height: 0;
-	padding: 8px 0;
+    background: rgba(0, 0, 0, .2);
+    line-height: 0;
+    padding: 8px 0;
 }
 
 #prev-slide {

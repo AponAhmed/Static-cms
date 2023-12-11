@@ -119,8 +119,11 @@ class Slider extends Model
             $html .= '<div class="slider-image">';
             $html .= $image->getImage($size, $ratio, $attr);
             $html .= '</div>';
+
             if ($params->caption) {
-                $html .= '<p class="image-caption">' . $image->name . '</p>';
+                $html .= '<h2 class="image-caption">' . $image->name . '</h2>';
+            } else {
+                $html .= '<h2 class="image-caption-d">' . $image->name . '</h2>';
             }
             $html .= '</div>';
         }

@@ -23,6 +23,7 @@ class ImageShortcode implements Shortcode
             'fromAll' => 'no',
             'limit' => 8,
             'cart' => 'yes',
+            'title' => '', //hide, none
             'rand' => true
         ];
         $this->attributes = array_merge($default, $attributes);
@@ -110,7 +111,10 @@ class ImageShortcode implements Shortcode
             }
             $html .= "</div>";
             $html .= "<div class='thumb-caption'>";
-            $html .= "<h3 class='image-title'>$image->name</h3>";
+            if ($this->attributes['title'] !== "none") {
+                $titleCls = $this->attributes['title'];
+                $html .= "<h3 class='image-title $titleCls'>$image->name</h3>";
+            }
             if ($this->attributes['cart'] == 'yes') {
                 $html .= "<div class='add2cart-wrap'><button data-id='$image->id' data-name='$image->name' class='add2cart' type='button'>Get Price</button></div>";
             }

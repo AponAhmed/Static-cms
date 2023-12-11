@@ -54,7 +54,7 @@
 							echo $links;
 						}else{
 							echo 'https://www.siatex.com
-https://siatex.co
+https://www.siatex.co
 https://siatexsl.com
 https://siatexhk.com
 https://siatexinc.com

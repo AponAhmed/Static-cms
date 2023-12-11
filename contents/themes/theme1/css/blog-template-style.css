@@ -181,6 +181,12 @@ ul.tick-icon li::marker {
     content: '✓';
 }
 
+.blog-related-sidebar {
+    background: #eee;
+    padding: 15px;
+    border-radius: 5px;
+}
+
 
 @media only screen and (max-width: 768px) {
     .template-banner {

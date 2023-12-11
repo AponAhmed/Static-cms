@@ -1,11 +1,16 @@
 @import "./slider.css";
 @import "./image-shortcode.css";
 @import "./menu.css";
+@import "./mega-menu.css";
 @import "./inner-link.css";
 @import "./contact.css";
 @import "./cart.css";
 @import "./static.css";
 @import "./notification.css";
+
+p:empty {
+    display: none;
+}
 
 .grid-view {
     column-count: 2;

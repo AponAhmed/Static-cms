@@ -23,7 +23,8 @@ class BlogRelatedTemplate
                     <label>Banner Left</label>
                     <textarea name="data[templateData][banner_left]" id="fa" class="bannerLeft" cols="30" rows="10"><?php $templateData ? __e($templateData['banner_left']) : "" ?></textarea>
                 </div>
-                <label><input type="checkbox" value="1" <?php echo isset($templateData['banner_image_fixed']) && $templateData['banner_image_fixed'] ? "checked" : "" ?> name="data[templateData][banner_image_fixed]"> <strong>Image Scroll Fixed</strong></label>
+                <label><input type="checkbox" value="1" <?php echo isset($templateData['banner_image_fixed']) && $templateData['banner_image_fixed'] ? "checked" : "" ?> name="data[templateData][banner_image_fixed]"> <strong>Image Scroll Fixed</strong></label>&nbsp;&nbsp;|&nbsp;
+                <label><input type="checkbox" value="1" <?php echo isset($templateData['banner_image_caption_d']) && $templateData['banner_image_caption_d'] ? "checked" : "" ?> name="data[templateData][banner_image_caption_d]"> <strong>Disable Image Caption</strong></label>
             </div>
             <div class="box box-4">
                 <label><input type="checkbox" value="1" name="data[templateData][sidebar]" <?php echo isset($templateData['sidebar']) && $templateData['sidebar'] ? "checked" : "" ?>>&nbsp;&nbsp;Enable Sidebar</label>
@@ -131,7 +132,11 @@ class BlogRelatedTemplate
                 <div class="image-thumb scroll-fixed">
                     <?php
                     if (count(featureimages()) > 1) {
-                        makeSlider($page->featureimages, ['bullet' => true, 'caption' => true, 'random' => true, 'nav' => true]);
+                        $caption = true;
+                        if (property_exists($templateData, 'banner_image_caption_d') && $templateData->banner_image_caption_d == 1) {
+                            $caption = $templateData->banner_image_caption_d == 1 ? false : true;
+                        }
+                        makeSlider($page->featureimages, ['bullet' => true, 'caption' => $caption, 'random' => true, 'nav' => true]);
                     } else {
                         get_thumbnail([6, 6, 12], true, true);
                     }
@@ -180,7 +185,7 @@ class BlogRelatedTemplate
             the_content();
             echo "</div>";
 
-            echo '<div class="box box-4"><aside>';
+            echo '<div class="box box-4"><aside class="blog-related-sidebar">';
             if (!empty($sidebar_title)) {
                 echo '<strong class="sidebar-title">' . $sidebar_title . '</strong>';
             }
