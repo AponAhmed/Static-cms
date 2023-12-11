@@ -25,6 +25,8 @@
 
     .nav-item.mega-menu.has-child>ul.nav-sub>li {
         padding: 20px;
+        flex: auto;
+        max-width: 250px;
     }
 
     .nav-item.mega-menu.has-child>ul.nav-sub ul {
@@ -40,6 +42,9 @@
 
     .nav-item.mega-menu.has-child>ul.nav-sub ul li a {
         font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     header .nav-item.mega-menu.has-child>ul>li a {
