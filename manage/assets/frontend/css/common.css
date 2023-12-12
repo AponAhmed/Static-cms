@@ -25,11 +25,11 @@ ol {
 
 article ol li strong,
 article ul li strong {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .has-strong strong {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .expand-content {

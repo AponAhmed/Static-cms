@@ -2,13 +2,100 @@
     --primary-color: #0a4b7f;
 }
 
+
 * {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    font-weight: 300;
+    font-size: 16px;
+
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: #333;
     line-height: 1.9;
 }
+
+/*Font Size and Font Weight*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.breadcrumb ul li a,
+.breadcrumb ul li span {
+    font-size: 12px;
+}
+
+.nav-item.mega-menu.has-child>ul.nav-sub>li>a {
+    font-weight: 400;
+}
+
+.wa-sidebar ul li.current a,
+.wa-sidebar ol li.current a {
+    font-weight: 400;
+}
+
+.wa-sidebar ol li a,
+.wa-sidebar ul li a {
+    font-size: 17px;
+}
+
+article ol li strong,
+article ul li strong {
+    font-size: 17px;
+}
+
+.add2cart {
+    font-weight: 400;
+}
+
+.gallery-content .h1,
+.gallery-content .h2,
+.gallery-content .h3,
+.gallery-content h1,
+.gallery-content h2,
+.gallery-content h3 {
+    font-size: clamp(20px, 5vw, 28px);
+    font-weight: 500;
+}
+
+.gallery-hoverable .image-list li h1,
+.gallery-hoverable .image-list li h2,
+.gallery-hoverable .image-list li h3,
+.gallery-hoverable .image-list li h4,
+.gallery-hoverable .image-list li h5 {
+    font-size: clamp(14px, 3vw, 18px);
+}
+
+.copyright {
+    font-size: 13px;
+}
+
+
+/*End Font Size and Font Weight*/
 
 body {
     margin: 0;
@@ -35,39 +122,24 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-weight: 500;
     color: #084f84;
+    line-height: 1.7;
+    margin: 5px 0 15px;
 }
 
 img {
     width: 100%;
 }
 
-h1,
-h2,
-h3,
-.h1,
-.h2,
-.h3 {
-    line-height: 1.7;
-    margin: 5px 0 15px;
-    font-weight: 500;
-}
-
-
-
 p {
     color: #333;
     line-height: 1.9;
     margin: 0 0 20px;
-    font-weight: 400;
-    font-size: 18px;
     text-align: justify;
 }
 
 .btn {
     padding: 10px 18px;
-    font-size: 15px;
     border: 1px solid rgba(0, 0, 0, .3);
     border-radius: 4px;
     line-height: 1;
@@ -85,16 +157,9 @@ article ul {
 
 article ol li,
 article ul li {
-    font-size: 16px;
     margin-bottom: 15px;
     text-align: justify;
 }
-
-article ol li strong,
-article ul li strong {
-    font-size: 18px;
-}
-
 
 .banner-simple {
     background: #f6f6f6;

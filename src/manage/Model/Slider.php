@@ -127,9 +127,9 @@ class Slider extends Model
             }
             $html .= '</div>';
         }
-        if ($params->bullet) {
-            $html .= '<div class="bullets"></div>';
-        }
+        // if ($params->bullet) {
+        //     $html .= '<div class="bullets"></div>';
+        // }
 
         if ($params->nav) {
             $html .= '<button class="slider-arrow" aria-label="Image Slide Previous" id="prev-slide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>';

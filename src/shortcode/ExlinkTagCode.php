@@ -44,7 +44,7 @@ class ExlinkTagCode  implements Shortcode
         if (!empty($uniqueAndValidUrls)) {
             $randomIndex = array_rand($uniqueAndValidUrls);
             $link = $uniqueAndValidUrls[$randomIndex];
-            return  "<a href=\"$link\" target=\"_blank\">$this->innerHtml</a>";
+            return  "<a href=\"$link\" target=\"_blank\" title=\"$this->innerHtml\">$this->innerHtml</a>";
         } else {
             return $this->innerHtml;
         }

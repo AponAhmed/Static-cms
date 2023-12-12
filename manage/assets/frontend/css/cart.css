@@ -240,8 +240,8 @@
 	padding: 8px 8px;
 	background: transparent;
 	border: 0;
-	font-weight: 500;
-	font-size: 16px;
+	/* font-weight: 500;
+	font-size: 16px; */
 	border-bottom: 2px solid;
 	color: #51739d;
 	line-height: 1;

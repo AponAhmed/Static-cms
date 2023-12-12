@@ -86,10 +86,11 @@
 }
 
 .image-caption {
+    color: inherit;
     font-size: 15px;
     font-style: italic;
     text-align: center;
-    color: inherit;
+    font-weight: inherit;
 }
 
 .image-caption-d {
@@ -307,8 +308,8 @@
 .gallery-content h2,
 .gallery-content h3 {
     color: inherit;
-    font-size: clamp(20px, 5vw, 32px);
-    font-weight: 600;
+    /* font-size: clamp(20px, 5vw, 32px); */
+    /* font-weight: 600; */
     line-height: 1;
     margin-bottom: 10px;
 }
@@ -332,8 +333,7 @@
 .gallery-hoverable .image-list li h5 {
     margin: 0;
     transition: all .2s;
-    /* text-transform: uppercase; */
-    font-size: clamp(14px, 3vw, 20px);
+    /* font-size: clamp(14px, 3vw, 20px); */
     text-align: left;
     color: inherit;
 }

@@ -37,11 +37,10 @@
 
 
     .nav-item.mega-menu.has-child>ul.nav-sub>li>a {
-        font-weight: 600;
+        font-weight: 400;
     }
 
     .nav-item.mega-menu.has-child>ul.nav-sub ul li a {
-        font-weight: 500;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

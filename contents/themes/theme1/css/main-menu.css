@@ -11,12 +11,10 @@
 
 .header-nav .nav-item>a {
     display: block;
-    font-size: 15px;
     padding: .50rem;
     text-decoration: none;
     transition: background-color .3s;
     color: #fff;
-    font-weight: 600;
 }
 
 .nav .nav-item.current-link {

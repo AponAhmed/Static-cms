@@ -49,7 +49,6 @@
     align-items: center;
     margin: 0 8px;
     text-decoration: none;
-    font-size: 16px;
     color: #333;
 }
 
@@ -83,7 +82,6 @@ p strong {
 
 .breadcrumb ul li a,
 .breadcrumb ul li span {
-    font-size: 14px;
     text-decoration: none;
     max-width: 120px;
     text-overflow: ellipsis;
@@ -144,4 +142,10 @@ p strong {
     .quick-contact-header svg * {
         color: #fff;
     }
+
+    .email svg {
+        stroke: #fff;
+    }
+
+    
 }

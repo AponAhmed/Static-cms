@@ -78,9 +78,9 @@ class BuiltIn
         <hr>
         {segment-1},{segment-2}...
         <hr>
-        [image dir="assets" col="4" mcol="2" tcol="3" link="yes" rand="yes" limit="28" cart="yes" fromAll="yes"]
+        [image dir="assets" col="4" title="hide/none" mcol="2" tcol="3" link="yes" rand="yes" limit="28" cart="yes" fromAll="yes"]
         <hr>
-        [grid col="2"][/grid], [color color="#666"][/color], [bold][/bold], [link], [exlink]
+        [grid col="2"][/grid], [color color="#666"][/color], [bold][/bold], <br>[link], [inlink] &lt;text&gt; [/inlink],<br>[exlink], [exlink] &lt;text&gt; [/exlink]
         <hr>
         [innerLink number="yes"] Q:-- A:---[/innerLink],<br> [innerLink number="yes"]-Heading Basis-[/innerLink],<br> [innerLink number="yes" type="single"]-Heading Basis Single-[/innerLink]
         <hr>

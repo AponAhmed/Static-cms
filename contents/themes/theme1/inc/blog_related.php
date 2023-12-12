@@ -187,7 +187,7 @@ class BlogRelatedTemplate
 
             echo '<div class="box box-4"><aside class="blog-related-sidebar">';
             if (!empty($sidebar_title)) {
-                echo '<strong class="sidebar-title">' . $sidebar_title . '</strong>';
+                echo '<h3 class="sidebar-title">' . $sidebar_title . '</h3>';
             }
             if (!empty($sidebar_menu)) {
                 get_menu($sidebar_menu, ['class' => 'sidebar-menu']);

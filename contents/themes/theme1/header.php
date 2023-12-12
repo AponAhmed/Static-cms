@@ -7,6 +7,9 @@
     <?php seo_meta() ?>
     <?php site_icon() ?>
     <?php get_breadcrumb_json() ?>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <?php
     inline_theme_asset('dist/bundle.css'); //theme_uri('dist/bundle.css'); 
     ?>

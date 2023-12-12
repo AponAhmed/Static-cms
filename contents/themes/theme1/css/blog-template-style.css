@@ -13,7 +13,7 @@
     margin: 0;
     font-size: 55px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 500;
     max-width: 400px;
     position: relative;
     color: #555;
@@ -31,7 +31,7 @@
 }
 
 .has_description p strong {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .template-banner.has_description.scrolling-fixed-wrapper {
@@ -92,7 +92,7 @@
     line-height: 1;
     letter-spacing: 2px;
     color: #666;
-    font-weight: 500;
+    font-weight: 400;
     margin: 0;
     margin-top: 35px;
 }
@@ -160,7 +160,7 @@
 }
 
 .sidebar-bottom-text strong {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .sidebar-bottom-text ul {
@@ -201,7 +201,8 @@ ul.tick-icon li::marker {
         padding: 42px 25px;
     }
 
-    .sidebar-bottom-text {
+    .blog-related-sidebar {
         display: none;
     }
+
 }
