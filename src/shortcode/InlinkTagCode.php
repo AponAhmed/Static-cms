@@ -13,7 +13,7 @@ use Aponahmed\Cmsstatic\Utilities\CsvFileManager;
 class InlinkTagCode  implements Shortcode
 {
     private Page $page;
-    private Page $currentPage;
+    private $currentPage;
     private CsvFileManager $csv;
 
     public array $attributes;
@@ -28,9 +28,15 @@ class InlinkTagCode  implements Shortcode
         $this->attributes = array_merge($default, $attributes);
         $this->currentPage = page_object();
 
+        if (!$this->currentPage) {
+            $slugC = "";
+        } else {
+            $slugC = $this->currentPage->slug;
+        }
+
         if ($this->attributes['slug']) {
             if ($this->attributes['slug'] == 'all') {
-                $this->page = Page::random($this->app, [$this->currentPage->slug]);
+                $this->page = Page::random($this->app, [$slugC]);
             } else {
                 $this->page = new Page($this->attributes['slug']);
             }

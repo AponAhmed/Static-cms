@@ -106,7 +106,6 @@ header .nav-item:hover>a {
     .nav {
         flex-direction: column;
         justify-content: flex-start;
-        height: 100%;
         width: 100%;
         overflow-y: auto;
     }
