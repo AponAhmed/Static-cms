@@ -80,7 +80,7 @@ class BuiltIn
         <hr>
         [image dir="assets" col="4" title="hide/none" mcol="2" tcol="3" link="yes" rand="yes" limit="28" cart="yes" fromAll="yes"]
         <hr>
-        [grid col="2"][/grid], [color color="#666"][/color], [bold][/bold], <br>[link], [inlink] &lt;text&gt; [/inlink],<br>[exlink], [exlink] &lt;text&gt; [/exlink]
+        [grid col="2"][/grid], [color color="#666"][/color], [bold][/bold], <br>[link], [inlink] &lt;text&gt; [/inlink],<br>[exlink], [texlink] &lt;text&gt; [/texlink]
         <hr>
         [innerLink number="yes"] Q:-- A:---[/innerLink],<br> [innerLink number="yes"]-Heading Basis-[/innerLink],<br> [innerLink number="yes" type="single"]-Heading Basis Single-[/innerLink]
         <hr>

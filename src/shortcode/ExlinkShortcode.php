@@ -33,13 +33,15 @@ class ExLinkShortcode  implements Shortcode
 
         // Extract the matched URLs from the result
         $urlLines = $matches[0];
+        $own = trim($this->app::$siteurl, "/");
 
         // Remove duplicate URLs and filter out invalid URLs
-        $uniqueAndValidUrls = array_filter(array_unique($urlLines), function ($url) {
+        $uniqueAndValidUrls = array_filter(array_unique($urlLines), function ($url) use ($own) {
             // Use additional validation logic if needed
-            return filter_var($url, FILTER_VALIDATE_URL);
+            if ($url != $own)
+                return filter_var($url, FILTER_VALIDATE_URL);
         });
-
+        
         // If there are valid URLs, return a random one; otherwise, return an empty string
         if (!empty($uniqueAndValidUrls)) {
             $randomIndex = array_rand($uniqueAndValidUrls);
