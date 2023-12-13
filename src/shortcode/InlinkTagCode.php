@@ -82,8 +82,11 @@ class InlinkTagCode  implements Shortcode
 
     function filter()
     {
-
+        $url = $this->app::$siteurl;            //Home Page URL
         $randUrl = $this->pageLink($this->page, [$this->page->slug]);
+        if (strpos($randUrl, $url) === false) {
+            $randUrl = $this->app->urlSlashFix($url . "/" . $randUrl);
+        }
         if (!empty($randUrl)) {
             return  "<a href=\"$randUrl\" title=\"$this->innerHtml\">$this->innerHtml</a>";
             $url = $randUrl;

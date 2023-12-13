@@ -7,7 +7,7 @@
     font-family: 'Roboto', sans-serif;
     line-height: 1.8;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 17px;
 
     box-sizing: border-box;
     margin: 0;
@@ -93,7 +93,9 @@ article ul li strong {
 .copyright {
     font-size: 13px;
 }
-
+p a {
+	font-size: inherit;
+}
 
 /*End Font Size and Font Weight*/
 
