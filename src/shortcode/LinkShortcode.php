@@ -47,6 +47,9 @@ class LinkShortcode  implements Shortcode
      */
     function pageLink($page, $ex = [])
     {
+        if (!$page) {
+            return false;
+        }
         if (!$this->attributes['multiple'] != 'yes') {
             $ex[] = $page->slug;
         }
@@ -79,7 +82,6 @@ class LinkShortcode  implements Shortcode
     {
 
         $url = $this->app::$siteurl;            //Home Page URL
-
         if (!self::$enable) {
             return $url;
         }
@@ -88,7 +90,6 @@ class LinkShortcode  implements Shortcode
         if (!empty($randUrl)) {
             $url = $randUrl;
         }
-
         return $url;
     }
 }

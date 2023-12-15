@@ -136,7 +136,13 @@ class BlogRelatedTemplate
                         if (property_exists($templateData, 'banner_image_caption_d') && $templateData->banner_image_caption_d == 1) {
                             $caption = $templateData->banner_image_caption_d == 1 ? false : true;
                         }
-                        makeSlider($page->featureimages, ['bullet' => true, 'caption' => $caption, 'random' => true, 'nav' => true]);
+                        makeSlider($page->featureimages, [
+                            'bullet' => true,
+                            'caption' => $caption,
+                            'random' => true,
+                            'nav' => true,
+                            'sliderArea' => ['d' => "2:1:21", 't' => '2:1', 'm' => '1:1:15'] //Acording area of window (window Width:Slider Widtg)
+                        ]);
                     } else {
                         get_thumbnail([6, 6, 12], true, true);
                     }

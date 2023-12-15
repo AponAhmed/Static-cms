@@ -24,7 +24,8 @@ class ImageShortcode implements Shortcode
             'limit' => 8,
             'cart' => 'yes',
             'title' => '', //hide, none
-            'rand' => true
+            'rand' => true,
+            'lazy' => 'yes',
         ];
         $this->attributes = array_merge($default, $attributes);
         if ($this->attributes['dir'] == '' || $this->attributes['dir'] == "/") {
@@ -100,14 +101,15 @@ class ImageShortcode implements Shortcode
         }
 
         $html = "<div class=\"box-row image-grid-wrap\">";
+        $lazyAttr=$this->attributes["lazy"]=='yes'?" loading=\"lazy\" ":"";
         foreach ($images as $image) {
             $src = $image->getSize($width);
             $html .= "<div class=\"$class\">";
             $html .= "<div class='image-thumb'>";
             if ($this->attributes['link'] == 'yes') {
-                $html .= "<a href=\"$image->url\"><img src=\"$src\" title=\"$image->name\" alt=\"$image->name\"></a>";
+                $html .= "<a href=\"$image->url\"><img src=\"$src\" $lazyAttr title=\"$image->name\" alt=\"$image->name\"></a>";
             } else {
-                $html .= "<img src=\"$src\" title=\"$image->name\" alt=\"$image->name\">";
+                $html .= "<img src=\"$src\" title=\"$image->name\"  $lazyAttr alt=\"$image->name\">";
             }
             $html .= "</div>";
             $html .= "<div class='thumb-caption'>";

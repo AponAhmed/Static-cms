@@ -52,6 +52,10 @@ class InlinkTagCode  implements Shortcode
      */
     function pageLink($page, $ex = [])
     {
+        if (!$page) {
+            return false;
+        }
+
         if (!$this->attributes['multiple'] != 'yes') {
             $ex[] = $page->slug;
         }
@@ -84,6 +88,9 @@ class InlinkTagCode  implements Shortcode
     {
         $url = $this->app::$siteurl;            //Home Page URL
         $randUrl = $this->pageLink($this->page, [$this->page->slug]);
+        if (!$randUrl) {
+            return $this->innerHtml;
+        }
         if (strpos($randUrl, $url) === false) {
             $randUrl = $this->app->urlSlashFix($url . "/" . $randUrl);
         }

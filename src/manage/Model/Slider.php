@@ -63,6 +63,8 @@ class Slider extends Model
             'height' => 350,
             'autoslide' => "false",
             'random' => false,
+            'sliderArea' => ['d' => "1:1:0", 't' => '1:1:0', 'm' => '1:1:0'] //here full width:slider:padding
+
         ];
         // Merge the provided parameters with the defaults
         $params = (object) array_merge($defaults, $params);
@@ -73,10 +75,31 @@ class Slider extends Model
         $device = $app->getDeviceType();
 
         if ($device == 'desktop') {
-            $size = $screenW - 236;
+            $size = $screenW - 246;
+            //Area Calculation
+            if (isset($params->sliderArea['d'])) {
+                $areaRetioPart = explode(":", $params->sliderArea['d']);
+                if ($areaRetioPart[0] > 0 &&  ($areaRetioPart[0] != $areaRetioPart[1])) {
+                    $size = ceil(($size / $areaRetioPart[0]) * $areaRetioPart[1]);
+                }
+                if (isset($areaRetioPart[2])) { //Padding will be deduced from area 
+                    $size -= ($areaRetioPart[2] * 2);
+                }
+            }
         } else {
-            $size = $screenW - 60;
+            $size = $screenW - 62;
+            if (isset($params->sliderArea['m'])) {
+                $areaRetioPart = explode(":", $params->sliderArea['m']);
+                if ($areaRetioPart[0] > 0 &&  ($areaRetioPart[0] != $areaRetioPart[1])) {
+                    $size = ceil(($size / $areaRetioPart[0]) * $areaRetioPart[1]);
+                }
+                if (isset($areaRetioPart[2])) { //Padding will be deduced from area 
+                    $size -= ($areaRetioPart[2] * 2);
+                }
+            }
         }
+
+
 
 
         if ($params->image_ratio != 'r') {
