@@ -199,7 +199,7 @@ class BlogRelatedTemplate
                 get_menu($sidebar_menu, ['class' => 'sidebar-menu']);
             }
             if (!empty($sidebar_bottom)) {
-                echo "<div class='sidebar-bottom-text'><p>" . $sidebar_bottom . "</p></div>";
+                echo "<div class='sidebar-bottom-text'>" . autop($sidebar_bottom) . "</div>";
             }
 
             echo "</aside></div>";
