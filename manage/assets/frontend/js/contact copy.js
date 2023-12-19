@@ -223,7 +223,7 @@ class WriteUs {
     }
 }
 
-
+jQuery('.write-us-btn').click(function () { new WriteUs() });
 
 function createSum() {
     var randomNum1 = getRandom(),
@@ -294,9 +294,6 @@ function trigFloated(_this) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    contactForm_init();
-    jQuery('.write-us-btn').click(function () { new WriteUs() });
-});
+contactForm_init();
 
 

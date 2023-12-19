@@ -10,7 +10,7 @@
             </div>
         </div>
     </footer>
-    <script src="<?php echo theme_uri('dist/jquery.js'); ?>"></script>
+    <script src="<?php echo theme_uri('dist/jquery.js'); ?>" defer></script>
     <script src="<?php echo theme_uri('dist/bundle.js'); ?>"></script>
     </body>
 

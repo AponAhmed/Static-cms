@@ -130,12 +130,15 @@ class Slider extends Model
         }
 
         $html = '<div data-autoslide="' . $params->autoslide . '" class="slider-wrap' . $cls . '" style="height:100%">';
-        $attr = [];
+
         $i = 0;
         foreach ($images  as $image) {
+            $attr = [];
             $i++;
             if ($i == 1) {
                 $attr = ['title' => page()->feature_image_title];
+            } else {
+                $attr['loading'] = 'lazy';
             }
             $image = Media::getInstanse($image);
             $html .= '<div class="slider-item">';
@@ -261,6 +264,7 @@ class Slider extends Model
         $height = $this->height ? $this->height : 350;
         $html = '<div class="slider-wrap' . $cls . '" style="height:' . $height . 'px">';
         for ($i = 0; $i < count($this->image); $i++) {
+            $attr = [];
             $image = Media::getInstanse($this->image[$i]);
 
             $html .= '<div class="slider-item">';
@@ -271,7 +275,10 @@ class Slider extends Model
                 $html .= '</div>';
             }
             $html .= '<div class="slider-image">';
-            $html .= $image->getImage($size, $ratio);
+            if ($i > 0) {
+                $attr['loading'] = 'lazy';
+            }
+            $html .= $image->getImage($size, $ratio, $attr);
             $html .= '</div>';
 
             $html .= '</div>';

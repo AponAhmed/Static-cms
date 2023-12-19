@@ -78,21 +78,23 @@ class Media
         if ($size) {
             $src = $this->getSize($size, $ratio);
         }
-        $width = '';
-        $height = '';
-        if ($size) {
-            $width = "width=\"$size\"";
-        }
-        if (!$ratio) {
-            $height = "height=\"$size\"";
-        }
+        $width = $size ? "width=\"$size\"" : '';
+        $height = !$ratio ? "height=\"$size\"" : '';
         $title = $this->name;
+    
         if (isset($attr['title']) && !empty($attr['title'])) {
             $title = $attr['title'];
+            // Remove 'title' from the $attr array, as we have already handled it separately
+            unset($attr['title']);
         }
-
-        return "<img src=\"$src\" $width $height title=\"$title\" alt=\"$title\">";
+        // Generate additional attributes from $attr
+        $additionalAttributes = '';
+        foreach ($attr as $key => $value) {
+            $additionalAttributes .= " $key=\"$value\"";
+        }    
+        return "<img src=\"$src\" $width $height title=\"$title\" alt=\"$title\" $additionalAttributes>";
     }
+    
 
     function getSrc()
     {
