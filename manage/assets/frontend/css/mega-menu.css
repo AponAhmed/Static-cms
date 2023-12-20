@@ -48,7 +48,7 @@
 
     header .nav-item.mega-menu.has-child>ul>li a {
         background-color: transparent;
-        padding: 2px;
+        padding: 0px;
     }
 
     header .nav-item.mega-menu.has-child>ul.nav-sub ul li.nav-item:hover>a {
