@@ -54,3 +54,40 @@ footer strong {
 .copyright a {
     text-decoration: none;
 }
+
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-top-menu {
+	display: flex;
+	list-style: none;
+	margin-bottom: 6px;
+	padding: 0;
+}
+.footer-top-menu li {
+    padding: 0 8px;
+    position: relative;
+}
+
+.footer-top-menu li a {
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 1;
+    display: block;
+}
+
+.footer-top-menu li::after {
+	background: #a29f9f;
+	content: "";
+	height: 80%;
+	position: absolute;
+	right: 0;
+	top: 2px;
+	width: 1px;
+}
+.footer-top-menu li:last-child::after {
+	display: none;
+}

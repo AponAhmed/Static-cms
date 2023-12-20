@@ -4,7 +4,8 @@
             <div class="box-row">
                 <div class="box box-12">
                     <div class="site-footer">
-                        <p class="copyright">&copy; All rights reserved <?php echo site_name() ?> Bangladesh, Canada, USA - 1987-<?php echo date('Y') ?> | [sitemap] </p>
+                        <?php get_menu('footer-top', ['class' => 'footer-top-menu']) ?>
+                        <p class="copyright">&copy; All rights reserved <?php echo site_name() ?> Bangladesh, Canada, USA - 1987-<?php echo date('Y') ?> </p>
                     </div>
                 </div>
             </div>
