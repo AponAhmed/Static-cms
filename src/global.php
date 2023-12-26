@@ -3,6 +3,7 @@
 use Aponahmed\Cmsstatic\Hook;
 use Aponahmed\Cmsstatic\Utilities\MetaBoxs;
 use Aponahmed\Cmsstatic\Performance;
+use Aponahmed\Cmsstatic\shortcode\RandkeyShortcode;
 
 $_p = new Performance();
 $_p->start('system', "System", ['file' => __FILE__, 'line' => __LINE__]);
@@ -21,6 +22,8 @@ $hook =  Hook::getInstance();
 $hook->add_filter('the_content', function ($str) {
     return autop($str);
 }, 1);
+
+$hook->add_action('ran_key_list', [RandkeyShortcode::class, 'getRandKeyList'], 2);
 
 $metabox = MetaBoxs::getInstance();
 $excrpt = [];

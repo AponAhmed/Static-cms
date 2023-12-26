@@ -12,6 +12,10 @@ p:empty {
     display: none;
 }
 
+.what-location {
+    display: none;
+}
+
 .grid-view {
     column-count: 2;
     column-gap: 50px;

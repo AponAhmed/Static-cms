@@ -24,7 +24,8 @@ class BlogRelatedTemplate
                     <textarea name="data[templateData][banner_left]" id="fa" class="bannerLeft" cols="30" rows="10"><?php $templateData ? __e($templateData['banner_left']) : "" ?></textarea>
                 </div>
                 <label><input type="checkbox" value="1" <?php echo isset($templateData['banner_image_fixed']) && $templateData['banner_image_fixed'] ? "checked" : "" ?> name="data[templateData][banner_image_fixed]"> <strong>Image Scroll Fixed</strong></label>&nbsp;&nbsp;|&nbsp;
-                <label><input type="checkbox" value="1" <?php echo isset($templateData['banner_image_caption_d']) && $templateData['banner_image_caption_d'] ? "checked" : "" ?> name="data[templateData][banner_image_caption_d]"> <strong>Disable Image Caption</strong></label>
+                <label><input type="checkbox" value="1" <?php echo isset($templateData['banner_image_caption_d']) && $templateData['banner_image_caption_d'] ? "checked" : "" ?> name="data[templateData][banner_image_caption_d]"> <strong>Disable Image Caption</strong></label>&nbsp;&nbsp;|&nbsp;
+                <label><input type="checkbox" value="1" <?php echo isset($templateData['location_disable']) && $templateData['location_disable'] ? "checked" : "" ?> name="data[templateData][location_disable]"> <strong>Disable location</strong></label>
             </div>
             <div class="box box-4">
                 <label><input type="checkbox" value="1" name="data[templateData][sidebar]" <?php echo isset($templateData['sidebar']) && $templateData['sidebar'] ? "checked" : "" ?>>&nbsp;&nbsp;Enable Sidebar</label>
@@ -179,6 +180,8 @@ class BlogRelatedTemplate
         $sidebar_pos = isset($templateData['sidebar_pos']) ? $templateData['sidebar_pos'] : "left";
         $sidebar_bottom = isset($templateData['sidebar_bottom']) ? $templateData['sidebar_bottom'] : "";
 
+        $locDisable = isset($templateData['location_disable']) ? $templateData['location_disable'] : "";
+
 
 
         if ($sidebar) {
@@ -195,9 +198,15 @@ class BlogRelatedTemplate
             if (!empty($sidebar_title)) {
                 echo '<h3 class="sidebar-title">' . $sidebar_title . '</h3>';
             }
+
+            if ($locDisable != '1') {
+                echo '[location]';
+            }
+
             if (!empty($sidebar_menu)) {
                 get_menu($sidebar_menu, ['class' => 'sidebar-menu']);
             }
+
             if (!empty($sidebar_bottom)) {
                 echo "<div class='sidebar-bottom-text'>" . autop($sidebar_bottom) . "</div>";
             }

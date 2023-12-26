@@ -14,7 +14,6 @@ class RandkeyShortcode implements Shortcode
 
     public function __construct($attributes, public ShortcodeParser $app)
     {
-
         $this->keyFile = $app::urlSlashFix($app::$dataDir . "/randKey.txt");
         $default = [
             'n'     => "1",
@@ -28,6 +27,36 @@ class RandkeyShortcode implements Shortcode
             'link'  => "false"
         ];
         $this->attributes = array_merge($default, $attributes);
+    }
+
+    public static function getRandKeyList($limit, $app)
+    {
+
+        $file = $app::urlSlashFix($app::$dataDir . "/randKey.txt");
+
+        // Read the file content
+        $str = stripslashes(file_get_contents($file));
+
+        // Explode the string into an array, filter empty values, and remove duplicates
+        $keys = array_unique(array_filter(explode(",", $str)));
+        shuffle($keys);
+        // If a limit is specified, slice the array to the desired size
+        if ($limit > 0) {
+            $keys = array_slice($keys, 0, $limit);
+        }
+
+        // If there are keys, create and return an unordered list
+        if (!empty($keys)) {
+            $html = '<div class="sidebar-bottom-text"><ul>';
+            foreach ($keys as $key) {
+                $html .= '<li>' . htmlspecialchars($key) . '</li>';
+            }
+            $html .= '</ul></div>';
+
+            echo  $html;
+        } else {
+            echo '<p>No keys found.</p>';
+        }
     }
 
 

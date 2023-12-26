@@ -276,6 +276,11 @@ function the_content()
     echo apply_filters('the_content', $content);
 }
 
+function getRandKeyList(){
+    
+}
+
+
 /**
  * Get the Menu by Slug
  * @param string $slug

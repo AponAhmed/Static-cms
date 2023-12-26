@@ -19,18 +19,28 @@
                     <div class="section_title">PRODUCT</div>
                     [image dir="" col="4" mcol="2" tcol="3" link="yes" rand="yes" limit="28" fromAll="yes"]
                 </div>
-                <div class="product-content-area">
-                    [color]
-                    <div class="box-row">
-                        <div class="box box-12">
-                            <h2><?php echo get_title() ?></h2>
-                            <p> [randphrase n="15"] </p>
+                <div class="box-row">
+                    <div class="box box-8">
+                        <div class="product-content-area">
+                            [color]
+                            <div class="box-row">
+                                <div class="box box-12">
+                                    <h2><?php echo get_title() ?></h2>
+                                    <p> [randphrase n="15"] </p>
+                                </div>
+                            </div>
+                            [randkey n="4" h="3" hl="1" pl="28" sl="3" col="1" show="false" link="2"]
+
+                            [/color]
                         </div>
                     </div>
-                    [randkey n="4" h="3" hl="1" pl="28" sl="3" col="1" show="false" link="2"]
-
-                    [/color]
+                    <div class="box box-4">
+                        <aside class="blog-related-sidebar">
+                            <?php do_action('ran_key_list', 30, app()); ?>
+                        </aside>
+                    </div>
                 </div>
+
             </section>
         </article>
     </div>
