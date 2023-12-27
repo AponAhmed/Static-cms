@@ -10,7 +10,7 @@ class RandkeyShortcode implements Shortcode
 {
     public $attributes;
     private $keyFile;
-    private $keys;
+    public $keys;
 
     public function __construct($attributes, public ShortcodeParser $app)
     {
@@ -28,6 +28,20 @@ class RandkeyShortcode implements Shortcode
         ];
         $this->attributes = array_merge($default, $attributes);
     }
+
+    public function getKeys($limit = 10)
+    {
+        if ($this->keys) {
+            $keys = $this->keys;
+            shuffle($keys);
+            // If a limit is specified, slice the array to the desired size
+            if ($limit > 0) {
+                $keys = array_slice($keys, 0, $limit);
+            }
+            return $keys;
+        }
+    }
+
 
     public static function getRandKeyList($limit, $app)
     {
@@ -47,7 +61,10 @@ class RandkeyShortcode implements Shortcode
 
         // If there are keys, create and return an unordered list
         if (!empty($keys)) {
-            $html = '<div class="sidebar-bottom-text"><ul>';
+            $html = '<div class="sidebar-bottom-text">
+            <h3 class="sidebar-title">We are also known as:</h3>
+            [location]
+            <ul>';
             foreach ($keys as $key) {
                 $html .= '<li>' . htmlspecialchars($key) . '</li>';
             }
@@ -63,14 +80,15 @@ class RandkeyShortcode implements Shortcode
     function filter()
     {
         if (file_exists($this->keyFile)) {
-            $this->getKey();
+            $this->setKey();
             return $this->generate();
         }
         return '';
     }
 
-    function getKey()
+    function setKey()
     {
+
         $str = stripslashes(file_get_contents($this->keyFile));
         $keys = array_unique(array_filter(explode(",", $str)));
         //var_dump(count($keys));

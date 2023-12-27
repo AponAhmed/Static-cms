@@ -16,6 +16,16 @@ p:empty {
     display: none;
 }
 
+
+
+.key-list {
+    margin-bottom: 15px;
+}
+
+.key-list li {
+    margin-bottom: 5px;
+}
+
 .grid-view {
     column-count: 2;
     column-gap: 50px;

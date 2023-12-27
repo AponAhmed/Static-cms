@@ -85,7 +85,8 @@ class BuiltIn
         [innerLink number="yes"] Q:-- A:---[/innerLink],<br> [innerLink number="yes"]-Heading Basis-[/innerLink],<br> [innerLink number="yes" type="single"]-Heading Basis Single-[/innerLink]
         <hr>
         [randkey n="2" h="2" hl="2" pl="20" sl="6" col="2" show="false" link="false"]<br>
-        [randphrase n="5"]
+        [randphrase n="5"]<br>
+        [randkey-list n="30"]
         <hr>
         [static cat="Services" col="3" icon="yes" icon-color="#f00" icon-bg="bg-e"]
         <pre>
